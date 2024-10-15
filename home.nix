@@ -201,6 +201,7 @@ in
     (import ./rofi/rofi.nix { inherit config pkgs; })
     (import ./contour/settings.nix { inherit config lib pkgs; })
     (import ./contour/contour.nix { inherit lib pkgs colorscheme; })
+    (import ./vscode/vscode.nix { inherit pkgs; })
 
     ./zoxide/zoxide.nix
     ./zathura/zathura.nix
@@ -454,7 +455,7 @@ in
     '';
 
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "codium";
       LANG = "en_US.UTF-8";
       LC_ALL = "en_US.UTF-8";
       XDG_DATA_DIRS = "$HOME/.nix-profile/share:$XDG_DATA_DIRS";

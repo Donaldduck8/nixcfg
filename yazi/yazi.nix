@@ -218,7 +218,7 @@ in {
         edit = if isNixOS then [
           { run = "${pkgs.contour}/bin/contour nvim \"$@\""; orphan = true; }
         ] else [
-          { run = "nixGL ${pkgs.contour}/bin/contour nvim \"$@\""; orphan = true; }
+          { run = "${pkgs.vscodium}/bin/codium \"$@\""; orphan = true; }
         ];
 
         # Open directories with nautilus (backup file manager)
